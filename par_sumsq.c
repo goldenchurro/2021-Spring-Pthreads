@@ -29,7 +29,7 @@ pthread_cond_t cond_new_addition = PTHREAD_COND_INITIALIZER;
 
 int main(int argc, char* argv[]) {
 if (!(argc == 2 || argc == 3)) {
-printf("par_sumsq <infile> <num_workers(default=1)>");
+printf("Usage: par_sumsq <infile> <num_workers(default=1)>");
 exit(EXIT_FAILURE);
 }
 
@@ -44,7 +44,7 @@ if (argc == 3) {
 const long in = strtol(argv[2], NULL, 10);
 if (in <= 0) {
 printf("Unable to get parse number from:", argv[2]);
-printf("par_sumsq <infile> <num_workers(default=1)>");
+printf("Usage: par_sumsq <infile> <num_workers(default=1)>");
 exit(EXIT_FAILURE);
 }
   
