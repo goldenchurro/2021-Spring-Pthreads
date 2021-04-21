@@ -162,7 +162,7 @@ free(queue);
 
 bool enqueue_task(TaskQueue* queue, long task_payload) {
 TaskQueueNode* n = (TaskQueueNode*)malloc(sizeof(struct TaskQueueNode));
-if (!n) return false; // Allocation failed.
+if (!n) return false; 
 n->payload = task_payload;
 n->next = NULL;
 if (!queue->head) {
